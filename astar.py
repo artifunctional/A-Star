@@ -62,11 +62,11 @@ class AStarSolver(object):
 
     def solve(self):
         start_state = StateString(
-                                self.start,
-                                0,
-                                self.start,
-                                self.goal
-                                )
+                        self.start,
+                        0,
+                        self.start,
+                        self.goal
+                        )
         self.priority_queue.put((0,start_state))
         while not self.path and self.priority_queue.qsize():
             closest_child = self.priority_queue.get()[1]
